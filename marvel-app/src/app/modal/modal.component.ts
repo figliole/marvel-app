@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ModalService } from '../service/modal.service';
 import { MarvelCallService } from '../service/marvel-call.service';
 
+
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
@@ -9,7 +10,8 @@ import { MarvelCallService } from '../service/marvel-call.service';
 })
 export class ModalComponent {
   dataById: any;
-  data = ['comics', 'events', 'stories', 'series'];
+  dataByIdMap : any;
+  data = ['comics', 'events', 'series', 'stories'];
 
   constructor(
     private modal: ModalService,
@@ -18,7 +20,14 @@ export class ModalComponent {
 
   ngOnInit() {
     this.marvelCall.getDataById(this.modal.modalData).subscribe((data) => {
-      this.dataById = data.data.results;
+      this.dataById = data.data.results[0];
+      this.dataByIdMap = {
+        comics: this.dataById.comics,
+        events: this.dataById.events,
+        stories: this.dataById.stories,
+        series: this.dataById.series,
+      };
+      console.log(this.dataById);
     });
   }
 

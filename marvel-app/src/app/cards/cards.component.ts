@@ -4,12 +4,6 @@ import { MarvelCallService } from '../service/marvel-call.service';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
-interface MarvelResponse {
-  data: {
-    results: any[];
-  };
-}
-
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html',
