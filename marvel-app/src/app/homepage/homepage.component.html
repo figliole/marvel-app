@@ -1,0 +1,14 @@
+<div class="ag-format-container">
+    <div class="ag-courses_box">
+        <div class="ag-courses_item"  *ngFor="let type of types">
+            <div [routerLink]="['/card']" class="ag-courses-item_link" id="hero">
+                <div class="ag-courses-item_bg"></div>
+                <div class="ag-courses-item_title">{{type}}</div>
+                <div class="ag-courses-item_date-box">
+                    All the information about your
+                    <span class="ag-courses-item_date"> {{type.toUpperCase()}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="modal-overlay">
+  <div class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>{{dataById[0].id}}</h3>
+        <button (click)="closeModal()">&#215;</button>
+      </div>
+      <div class="modal-body" *ngFor="let item of data">
+        <app-modal-content [dati]="dataById[0].item"></app-modal-content>
+      </div>
+    </div>
+  </div>
+</div>

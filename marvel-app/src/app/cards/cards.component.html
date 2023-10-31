@@ -1,0 +1,17 @@
+<div *ngIf="isLoading" class="cssload-container">
+    <div class="cssload-speeding-wheel"></div>
+</div>
+
+<div *ngIf="!isLoading" class="container-card">
+    <article class="cta" *ngFor="let hero of heroes">
+        <img [src]="hero.thumbnail.path + '/' + IMAGE_SIZE + '.' + hero.thumbnail.extension" alt="">
+        <div class="cta__text-column">
+            <h4>
+                {{hero.name || hero.title}}
+            </h4>
+            <button (click)="openModal(hero.id)">Details</button>
+        </div>
+    </article>
+</div>
+
+<app-modal *ngIf="isVisible"></app-modal>

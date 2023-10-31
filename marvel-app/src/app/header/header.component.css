@@ -1,0 +1,65 @@
+.header{
+    background-image: linear-gradient(to right , #cb2d3e , #ef473a);
+    height: 6rem;
+    width: 100%;
+    display: flex;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+li{
+    list-style-type: none;
+}
+
+
+
+
+
+
+
+/* a{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+a:hover{
+    color: #3772FF;
+} */
+
+/* Stile predefinito per il link */
+.nav-link {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+  padding: 0 10px; /* Aggiungi spaziatura tra l'icona e il testo */
+}
+
+/* Aggiungi un'icona come pseudoelemento */
+.nav-link::before {
+  content: "\f105"; /* Codice dell'icona */
+  font-family: FontAwesome;
+  position: absolute;
+  top: 0; /* Posiziona l'icona sopra il testo */
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Cambia il colore del testo e mostra l'icona al passaggio del mouse */
+.nav-link:hover {
+  color: #00f;
+  transform: translateY(10px);
+}
+
+.nav-link:hover::before {
+  opacity: 1;
+  transform: translateY(-10px);
+}

@@ -1,0 +1,16 @@
+<nav class="header">
+    <p>MarvelComio</p>
+    <ul>
+        <li><a (click)="getRouterLink('characters')">Characters</a></li>
+        <li><a (click)="getRouterLink('comics')">Comics</a></li>
+        <li><a (click)="getRouterLink('creators')">Creators</a></li>
+        <li><a (click)="getRouterLink('series')">Series</a></li>
+        <li><a (click)="getRouterLink('stories')">Stories</a></li>
+    </ul>
+    <div>
+      
+            <input [(ngModel)]="word"  placeholder="Inserisci una parola chiave"/>
+            <button (click)="search()">Cerca</button>
+        
+    </div>
+</nav>
